@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+  <Ad>
+    <ImageUrl>~/Images/Ads/DC.JPG</ImageUrl>
+    <NavigateUrl>https://www.designcafe.com/</NavigateUrl>
+    <AlternateText>Design Cafe</AlternateText>
+    <Impressions>10</Impressions>
+    <Keyword>Interiors</Keyword>
+  </Ad>
+  <Ad>
+    <ImageUrl>~/Images/Ads/HL.JPG</ImageUrl>
+    <NavigateUrl>https://www.homelane.com/</NavigateUrl>
+    <AlternateText>Home Lane</AlternateText>
+    <Impressions>10</Impressions>
+    <Keyword>Interiors</Keyword>
+  </Ad>
+  <Ad>
+    <ImageUrl>~/Images/Ads/UC.JPG</ImageUrl>
+    <NavigateUrl>https://www.urbancompany.com/</NavigateUrl>
+    <AlternateText>Urban Company</AlternateText>
+    <Impressions>10</Impressions>
+    <Keyword>Packers</Keyword>
+  </Ad>
+  <Ad>
+    <ImageUrl>~/Images/Ads/GB.png</ImageUrl>
+    <NavigateUrl>https://www.greatbuyz.com</NavigateUrl>
+    <AlternateText>Great Buys</AlternateText>
+    <Impressions>10</Impressions>
+    <Keyword>Packers</Keyword>
+  </Ad>
+</Advertisements>

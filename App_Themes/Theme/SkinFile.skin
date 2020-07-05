@@ -1,0 +1,49 @@
+﻿<%--
+Default skin template. The following skins are provided as examples only.
+
+1. Named control skin. The SkinId should be uniquely defined because
+   duplicate SkinId's per control type are not allowed in the same theme.
+
+<asp:GridView runat="server" SkinId="gridviewSkin" BackColor="White" >
+   <AlternatingRowStyle BackColor="Blue" />
+</asp:GridView>
+
+2. Default skin. The SkinId is not defined. Only one default 
+   control skin per control type is allowed in the same theme.
+
+<asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
+--%>
+
+<asp:HyperLink runat="server" ForeColor="#f66400"></asp:HyperLink>
+
+<asp:TextBox runat="server" Height="2.5em" Width="20em" Font-Size="1em"></asp:TextBox>
+
+<asp:DropDownList runat="server" Height="2.5em" Width="20em" Font-Size="1em"></asp:DropDownList>
+
+<asp:Button runat="server" Height="2.5em" Width="10em" BackColor="#F66400" Font-Bold="True" Font-Size="1.25em" ForeColor="White"></asp:Button>
+
+
+<asp:TextBox SkinId="normal" runat="server" Height="2.5em" Width="100%" Font-Size="1em"></asp:TextBox>
+<asp:TextBox SkinId="adm" runat="server" Height="2.5em" Width="50%" Font-Size="1em"></asp:TextBox>
+<asp:TextBox SkinId="multiline" runat="server" Width="100%" Font-Size="1em"></asp:TextBox>
+
+
+<asp:Button runat="server" SkinId="small" BorderStyle="Outset" BackColor="#800300" BorderColor="#F66400" 
+Font-Names="Verdana" Font-Size="1em" Font-Underline="False" ForeColor="White" BorderWidth="3px" 
+Font-Bold="True" Height="2.5em" />
+
+<asp:Button SkinId="del" runat="server" BorderStyle="Outset" BackColor="#CC0000" BorderColor="#CC0000"
+Font-Names="Verdana" Font-Size="1em" Font-Underline="False" ForeColor="White"
+BorderWidth="3px" Font-Bold="True" Height="2.5em" />
+
+<asp:Button SkinId="green" runat="server" BorderStyle="Outset" BackColor="#009900" BorderColor="#009900"
+Font-Names="Verdana" Font-Size="1em" Font-Underline="False" ForeColor="White"
+BorderWidth="3px" Font-Bold="True" Height="2.5em" />
+
+<asp:Button SkinId="yellow" runat="server" BorderStyle="Outset" BackColor="#FFCC00" BorderColor="#FFCC00"
+Font-Names="Verdana" Font-Size="1em" Font-Underline="False" ForeColor="Black"
+BorderWidth="3px" Font-Bold="True" Height="2.5em" />
+
+<asp:Button SkinId="blue" runat="server" BorderStyle="Outset" BackColor="#6600FF" BorderColor="#6600FF"
+Font-Names="Verdana" Font-Size="1em" Font-Underline="False" ForeColor="White"
+BorderWidth="3px" Font-Bold="True" Height="2.5em" />

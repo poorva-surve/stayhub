@@ -1,0 +1,193 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="OwnerSite2.master.cs" Inherits="OwnerSite" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>StayHub.com</title>
+    <link href="~/Stylesheet/Style.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8" />
+    <%--<meta name="viewport" content="width=device-width, initial-scale=1" />--%>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" >
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body alink="#F66400" link="#F66400" vlink="#F66400">
+<style>
+        @media screen and (min-width: 601px)
+        {
+            #social-media-links
+            {
+                float: left;
+                position: absolute;
+                left: 1vw;
+            }
+            #social-media-links a
+            {
+                color: White;
+                padding: 0 1vw;
+                font-size: 1.5vw;
+            }
+            #space
+            {
+                display: none;
+            }
+            #footer
+            {
+                width: 100%;
+            }
+              
+        }
+        @media screen and (max-width: 600px)
+        {
+            
+            #social-media-links
+            {
+                float: none;
+                position: relative;
+            }
+            #social-media-links a
+            {
+                color: White;
+                padding: 0 1vw;
+                font-size: 3.5vw;
+            }
+            #space
+            {
+                visibility: visible;
+            }
+        }
+        #topBtn
+        {
+            display: none;
+            position: fixed;
+            bottom: 2vw;
+            right: 2vw;
+            z-index: 99;
+            font-size: 1em;
+            border: none;
+            outline: none;
+            background-color: #ffb480;
+            color: white;
+            cursor: pointer;
+            padding: 1vw;
+            border-radius: 100%;
+        }
+        
+        #topBtn:hover
+        {
+            background-color: #f66400;
+            transition: ease-in-out 0.2s;
+        }
+    </style>
+    <form id="form1" runat="server">
+    <button onclick="topFunction()" id="topBtn" title="Go to top">
+        <i class ="fa fa-angle-up fa-lg"></i></button>
+    <script type="text/javascript">
+        //Get the button
+        var mybutton = document.getElementById("topBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <table width="100%">
+        <tr>
+            <td>
+                <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top" style="position: relative;">
+                      <a class="navbar-brand " href="Owner.aspx"><img class="col-lg-5 col-md-5 col-sm-6 col-xs-6 " src="Images/Logo.png" style=" max-width:500px;" alt=""/></a>
+                      <button class="navbar-toggler ml-auto float-right  col-md-1 col-sm-1 col-xs-1" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      
+                      
+                      <div class="collapse navbar-collapse float-right" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto align-items-center">
+                          <li class="nav-item">
+                            <a class="nav-link" id="navbarHome" href="Owner.aspx">Home</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link"  id="navbarO1" href="OwnAdd.aspx">Add New PG</a>
+                          </li>
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown" >
+                              My PGs
+                            </a>
+                            <div class="dropdown-menu" >
+                              <a class="dropdown-item" href="OwnPG.aspx">View/Delete PGs</a>
+                              <a class="dropdown-item" href="OwnExpiry.aspx">Reactivate/Deactivate PGs</a>
+                              <a class="dropdown-item" href="OwnSchedule.aspx">PG Visits</a>
+                            </div>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" id="navbarAccount" href="OwnerProfile.aspx">My Profile</a>
+                          </li>
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarContact" data-toggle="dropdown" >
+                              Contact Us
+                            </a>
+                            <div class="dropdown-menu" >
+                              <a class="dropdown-item" href="OwnFeedback.aspx">Send Feedback</a>
+                              <div class="dropdown-divider"></div>
+                              <span class="dropdown-item-text" >Call Us:</span>
+                              <a class=" dropdown-item-text" href="tel:+91 9821070248">+91 9821 070 248</a>
+                              <div class="dropdown-divider"></div>
+                              <span class="dropdown-item-text" >Email Us:</span>
+                              <a class="dropdown-item-text" href="mailto:customer.care@stayhub.com">customer.care@stayhub.com</a>
+                              <%--<a class="dropdown-item" href="#">Social Media Handles</a>--%>
+                            </div>
+                          </li>
+                          <li class="nav-item">
+                          <asp:Button ID="btnLog" runat="server" Text="Login" SkinID="l" BorderStyle="Outset"
+                        BackColor="#800300" BorderColor="#F66400" Font-Names="Verdana" Font-Size="16px"
+                        Font-Underline="False" ForeColor="White" OnClick="btnLog_Click" BorderWidth="3px"
+                        Font-Bold="True" Height="35px" />
+                        </li>
+                        </ul>
+    
+                      </div>
+                      
+                    </nav>
+                <hr width="100%" style="margin: 0px" />
+            </td>
+        </tr>
+        <tr style=" min-height: 65vh">
+            <td>
+                <div>
+                    <asp:ContentPlaceHolder ID="ContentPage" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center; font-size: 14px; color: #fff;" bgcolor="#800300" height="80px">
+                <div class="col-12">
+                    Copyright© 2020 Stayhub. All rights reserved.
+                    <p id="space">
+                    </p>
+                    <span id="social-media-links"><a href="https://www.facebook.com/surve.poorva" target="_blank">
+                        <i class="fa fa-facebook-square fa-lg"></i></a><a href="https://www.instagram.com/snooze_again"
+                            target="_blank"><i class="fa fa-instagram fa-lg"></i></a><a href="https://www.linkedin.com/in/poorva-surve-171b57170"
+                                target="_blank"><i class="fa fa-linkedin-square fa-lg"></i></a></span>
+                </div>
+            </td>
+        </tr>
+    </table>
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>

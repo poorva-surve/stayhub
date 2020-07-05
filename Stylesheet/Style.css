@@ -1,0 +1,120 @@
+﻿html
+{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+body
+{
+    font-family: Verdana, Arial, Sans-Serif;
+    color: #413B49;
+}
+link, vlink, alink
+{
+    color: #F66400;
+}
+
+/*---Master pages---*/
+
+#navbarSupportedContent li
+{
+    color: Black;
+    padding: 0px 5px;
+    margin: 5px;
+}
+.nav-item a:hover
+{
+    color: White;
+    background-color: #f66400;
+}
+#navbarHome:hover, #navbarSearch:hover, #navbarAbout:hover, #navbarContact:hover, #navbarAccount:hover, #navbarDropdown:hover
+{
+    color: White;
+    background-color: #f66400;
+}
+
+#navbarAd1:hover, #navbarAd2:hover, #navbarAd3:hover, #navbarAd4:hover, #navbarO1:hover
+{
+    color: White;
+    background-color: #f66400;
+}
+/*----*/
+
+
+/* Cities Icons Homepage */
+.flex-container
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
+
+.flex-container > div img
+{
+    margin: 30px;
+    transition: transform ease-in-out 0.5s;
+}
+#ourCities div img:hover
+{
+    border: 5px solid #f66400;
+    border-radius: 100%;
+    transform: scale(1.2);
+}
+/*---*/
+
+
+/*Seek PG images row*/
+.flex-container .imgIcons
+{
+    height: 25%;
+    width: 25%;
+    margin: 2%;
+}
+/*----*/
+
+/*OwnerFullPG images row*/
+.flex-container .imgIcons2
+{
+    height: 100%;
+    width: 100%;
+    margin: 2%;
+}
+/*----*/
+
+#outer-wrapper
+{
+    position: relative;
+}
+#pic-slider
+{
+    z-index: -1;
+    position: absolute;
+}
+
+#homeIntro
+{
+    z-index: 1;
+    position: absolute;
+}
+#pic-slider .carousel-inner img
+{
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+}
+
+
+.carousel-item
+{
+    height: 90vh;
+    background-repeat: repeat-y;
+    background: center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
